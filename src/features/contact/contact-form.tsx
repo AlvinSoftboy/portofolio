@@ -21,13 +21,18 @@ export const ContactForm = () => {
     setTimeout(() => setSent(false), 3000);
   };
 
+  // Focus ring uses accent — consistent with the active/CTA color
   const inputClass =
-    "w-full border-[3px] border-black bg-white px-4 py-3 text-base font-medium shadow-[4px_4px_0_0_#000] focus:outline-none focus:ring-0 focus:-translate-x-0.5 focus:-translate-y-0.5 focus:shadow-[6px_6px_0_0_#ff5b1f] transition-all";
+    "w-full border-[3px] border-[var(--nb-ink)] bg-[var(--nb-paper)] px-4 py-3 text-base font-medium shadow-[4px_4px_0_0_var(--nb-ink)] focus:outline-none focus:ring-0 focus:-translate-x-0.5 focus:-translate-y-0.5 focus:shadow-[6px_6px_0_0_var(--nb-accent)] transition-all placeholder:text-[#a0a09a]";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div>
-        <label htmlFor="name" className="block mb-2 font-black text-sm uppercase tracking-wide">
+        <label
+          htmlFor="name"
+          className="block mb-2 font-black text-sm uppercase tracking-wide"
+          style={{ color: "var(--nb-ink)" }}
+        >
           Name
         </label>
         <input
@@ -42,7 +47,11 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="email" className="block mb-2 font-black text-sm uppercase tracking-wide">
+        <label
+          htmlFor="email"
+          className="block mb-2 font-black text-sm uppercase tracking-wide"
+          style={{ color: "var(--nb-ink)" }}
+        >
           Email
         </label>
         <input
@@ -57,7 +66,11 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block mb-2 font-black text-sm uppercase tracking-wide">
+        <label
+          htmlFor="message"
+          className="block mb-2 font-black text-sm uppercase tracking-wide"
+          style={{ color: "var(--nb-ink)" }}
+        >
           Message
         </label>
         <textarea
@@ -77,7 +90,11 @@ export const ContactForm = () => {
           Send Message
         </BrutalButton>
         {sent && (
-          <span className="font-bold text-black text-sm" role="status">
+          <span
+            className="font-black text-sm uppercase tracking-wide"
+            style={{ color: "var(--nb-ink)" }}
+            role="status"
+          >
             Pesan terkirim!
           </span>
         )}

@@ -10,7 +10,11 @@ export const HomeSection = () => {
   const [showName, setShowName] = useState(false);
 
   return (
-    <section id="home" className="relative flex items-center bg-white min-h-screen">
+    <section
+      id="home"
+      className="relative flex items-center min-h-screen"
+      style={{ backgroundColor: "var(--nb-paper)" }}
+    >
       <div className="mx-auto px-5 py-24 w-full max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,11 +22,22 @@ export const HomeSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-4xl"
         >
-          <span className="inline-block bg-[#ff5b1f] shadow-[4px_4px_0_0_#000] px-3 py-1 border-[3px] border-black font-black text-xs uppercase tracking-widest">
+          {/* Badge: highlight (yellow) — decorative label, not a CTA */}
+          <span
+            className="inline-block px-3 py-1 border-[3px] font-black text-xs uppercase tracking-widest shadow-[4px_4px_0_0_var(--nb-ink)]"
+            style={{
+              backgroundColor: "var(--nb-highlight)",
+              borderColor: "var(--nb-ink)",
+              color: "var(--nb-ink)",
+            }}
+          >
             Available for hire
           </span>
 
-          <h1 className="mt-6 font-black text-5xl sm:text-7xl md:text-8xl uppercase leading-[0.95] tracking-tight">
+          <h1
+            className="mt-6 font-black text-5xl sm:text-7xl md:text-8xl uppercase leading-[0.95] tracking-tight"
+            style={{ color: "var(--nb-ink)" }}
+          >
             <span className="block">
               <Typewriter text="Hi, I'm" speed={80} onComplete={() => setShowName(true)} />
             </span>
@@ -34,25 +49,30 @@ export const HomeSection = () => {
                   deleteSpeed={50}
                   loop={true}
                   delayAfterType={2000}
-                  className="text-black"
+                  className="text-[var(--nb-ink)]"
                 />
               </span>
             )}
           </h1>
 
-          <p className="mt-8 max-w-2xl font-bold text-black text-xl sm:text-2xl">
+          <p
+            className="mt-8 max-w-2xl font-black text-xl sm:text-2xl"
+            style={{ color: "var(--nb-ink)" }}
+          >
             Freelance Frontend Developer
           </p>
-          <p className="mt-4 max-w-2xl text-neutral-700 text-base sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base sm:text-lg" style={{ color: "#4a4a46" }}>
             Membangun antarmuka modern, responsif, dan cepat dengan React, TypeScript, dan Tailwind
             CSS.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
+            {/* primary = accent fill — the main CTA */}
             <BrutalButton variant="primary" onClick={() => scrollToSection("contact")}>
               <Briefcase size={18} />
               Hire Me
             </BrutalButton>
+            {/* secondary = surface fill — subordinate action */}
             <BrutalButton variant="secondary" onClick={() => scrollToSection("portfolio")}>
               View Portfolio
               <ArrowRight size={18} />

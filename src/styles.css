@@ -132,6 +132,23 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/*
+ * Neobrutalism design tokens
+ *
+ * --nb-ink       : all borders, hard shadows, primary text
+ * --nb-paper     : primary section background (warm white)
+ * --nb-surface   : alternate section background (warm off-white)
+ * --nb-accent    : single CTA color — use sparingly (primary buttons, active nav)
+ * --nb-highlight : decorative accent — badges, tags, hover fills
+ */
+:root {
+  --nb-ink:       #0a0a0a;
+  --nb-paper:     #fafaf8;
+  --nb-surface:   #f0ede6;
+  --nb-accent:    #ff5500;
+  --nb-highlight: #ffe135;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -142,7 +159,7 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--nb-paper);
+    color: var(--nb-ink);
   }
 }

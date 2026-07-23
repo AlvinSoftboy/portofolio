@@ -12,21 +12,44 @@ const ICON_MAP: Record<SocialLink["icon"], LucideIcon> = {
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="bg-neutral-100 border-black border-t-[3px]">
+    <section
+      id="contact"
+      className="border-t-[3px]"
+      style={{
+        backgroundColor: "var(--nb-surface)",
+        borderColor: "var(--nb-ink)",
+      }}
+    >
       <div className="mx-auto px-5 py-24 max-w-6xl">
         <div className="flex justify-between items-end gap-4 mb-12">
-          <h2 className="font-black text-4xl sm:text-6xl uppercase tracking-tight">Contact</h2>
-          <span className="bg-white shadow-[4px_4px_0_0_#000] px-3 py-1 border-[3px] border-black font-black text-xs uppercase">
+          <h2
+            className="font-black text-4xl sm:text-6xl uppercase tracking-tight"
+            style={{ color: "var(--nb-ink)" }}
+          >
+            Contact
+          </h2>
+          {/* Badge: paper bg on surface section */}
+          <span
+            className="px-3 py-1 border-[3px] font-black text-xs uppercase shadow-[4px_4px_0_0_var(--nb-ink)]"
+            style={{
+              backgroundColor: "var(--nb-paper)",
+              borderColor: "var(--nb-ink)",
+              color: "var(--nb-ink)",
+            }}
+          >
             03 / Let&apos;s talk
           </span>
         </div>
 
         <div className="gap-12 grid md:grid-cols-2">
           <div>
-            <p className="font-black text-2xl sm:text-3xl uppercase leading-tight">
+            <p
+              className="font-black text-2xl sm:text-3xl uppercase leading-tight"
+              style={{ color: "var(--nb-ink)" }}
+            >
               Got a project in mind? Let&apos;s build something bold together.
             </p>
-            <p className="mt-4 text-neutral-700 text-base">
+            <p className="mt-4 text-base" style={{ color: "#4a4a46" }}>
               Reply biasanya dalam 24 jam. Untuk obrolan cepat, langsung saja kirim email atau DM.
             </p>
 
@@ -35,11 +58,26 @@ export const ContactSection = () => {
                 const Icon = ICON_MAP[link.icon];
                 return (
                   <li key={link.label}>
+                    {/* Hover: highlight fill — distinct from accent, safe on surface bg */}
                     <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 bg-white hover:bg-[#ff5b1f] shadow-[4px_4px_0_0_#000] hover:shadow-[6px_6px_0_0_#000] px-4 py-2 border-[3px] border-black font-bold uppercase transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-3 border-[3px] px-4 py-2 font-black uppercase shadow-[4px_4px_0_0_var(--nb-ink)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_var(--nb-ink)]"
+                      style={
+                        {
+                          backgroundColor: "var(--nb-paper)",
+                          borderColor: "var(--nb-ink)",
+                          color: "var(--nb-ink)",
+                          "--hover-bg": "var(--nb-highlight)",
+                        } as React.CSSProperties
+                      }
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.backgroundColor = "var(--nb-highlight)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.backgroundColor = "var(--nb-paper)")
+                      }
                     >
                       <Icon size={18} />
                       {link.label}
@@ -50,7 +88,14 @@ export const ContactSection = () => {
             </ul>
           </div>
 
-          <div className="bg-white shadow-[8px_8px_0_0_#000] p-6 sm:p-8 border-[3px] border-black">
+          {/* Contact form card: paper bg on surface section — stands out cleanly */}
+          <div
+            className="p-6 sm:p-8 border-[3px] shadow-[8px_8px_0_0_var(--nb-ink)]"
+            style={{
+              backgroundColor: "var(--nb-paper)",
+              borderColor: "var(--nb-ink)",
+            }}
+          >
             <ContactForm />
           </div>
         </div>
