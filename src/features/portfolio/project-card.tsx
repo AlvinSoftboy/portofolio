@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-import type { Project } from "../shared/types";
+import type { Project } from "@/types";
 
 type ProjectCardProps = {
   project: Project;

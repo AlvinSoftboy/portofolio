@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { SectionId } from "./types";
+import type { SectionId } from "@/types";
 
 export const useActiveSection = (sectionIds: SectionId[]): SectionId => {
   const [active, setActive] = useState<SectionId>(sectionIds[0]);

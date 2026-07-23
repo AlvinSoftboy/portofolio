@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PROJECTS } from "../shared/data";
+import { PROJECTS } from "@/constants";
 import { ProjectCard } from "./project-card";
 
 export const PortfolioSection = () => {
@@ -7,9 +7,7 @@ export const PortfolioSection = () => {
     <section id="portfolio" className="border-t-[3px] border-black bg-white">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mb-12 flex items-end justify-between gap-4">
-          <h2 className="text-4xl font-black uppercase tracking-tight sm:text-6xl">
-            Portfolio
-          </h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight sm:text-6xl">Portfolio</h2>
           <span className="border-[3px] border-black bg-[#ff5b1f] px-3 py-1 text-xs font-black uppercase shadow-[4px_4px_0_0_#000]">
             02 / Selected work
           </span>

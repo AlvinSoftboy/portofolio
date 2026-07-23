@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
-import { BrutalButton } from "../shared/brutal-button";
+import { BrutalButton } from "@/components/brutal-button";
 
 type FormState = {
   name: string;
@@ -27,10 +27,7 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div>
-        <label
-          htmlFor="name"
-          className="mb-2 block text-sm font-black uppercase tracking-wide"
-        >
+        <label htmlFor="name" className="block mb-2 font-black text-sm uppercase tracking-wide">
           Name
         </label>
         <input
@@ -45,10 +42,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label
-          htmlFor="email"
-          className="mb-2 block text-sm font-black uppercase tracking-wide"
-        >
+        <label htmlFor="email" className="block mb-2 font-black text-sm uppercase tracking-wide">
           Email
         </label>
         <input
@@ -63,10 +57,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label
-          htmlFor="message"
-          className="mb-2 block text-sm font-black uppercase tracking-wide"
-        >
+        <label htmlFor="message" className="block mb-2 font-black text-sm uppercase tracking-wide">
           Message
         </label>
         <textarea
@@ -86,7 +77,7 @@ export const ContactForm = () => {
           Send Message
         </BrutalButton>
         {sent && (
-          <span className="text-sm font-bold text-black" role="status">
+          <span className="font-bold text-black text-sm" role="status">
             Pesan terkirim!
           </span>
         )}
