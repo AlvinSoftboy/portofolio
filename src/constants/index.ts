@@ -58,8 +58,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
-  { label: "Twitter", href: "https://twitter.com", icon: "twitter" },
-  { label: "Email", href: "mailto:hello@example.com", icon: "mail" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/podaalviendamanik/", icon: "linkedin" },
+  { label: "GitHub", href: "https://github.com/AlvinSoftboy", icon: "github" },
+  { label: "Email", href: "mailto:alvindamanik577@gmail.com", icon: "mail" },
 ];

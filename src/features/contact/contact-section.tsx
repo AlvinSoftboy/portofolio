@@ -30,7 +30,7 @@ export const ContactSection = () => {
           </h2>
           {/* Badge: paper bg on surface section */}
           <span
-            className="px-3 py-1 border-[3px] font-black text-xs uppercase shadow-[4px_4px_0_0_var(--nb-ink)]"
+            className="shadow-[4px_4px_0_0_var(--nb-ink)] px-3 py-1 border-[3px] font-black text-xs uppercase"
             style={{
               backgroundColor: "var(--nb-paper)",
               borderColor: "var(--nb-ink)",
@@ -63,7 +63,7 @@ export const ContactSection = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 border-[3px] px-4 py-2 font-black uppercase shadow-[4px_4px_0_0_var(--nb-ink)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_var(--nb-ink)]"
+                      className="inline-flex items-center gap-3 shadow-[4px_4px_0_0_var(--nb-ink)] hover:shadow-[6px_6px_0_0_var(--nb-ink)] px-4 py-2 border-[3px] font-black uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5"
                       style={
                         {
                           backgroundColor: "var(--nb-paper)",
@@ -90,7 +90,7 @@ export const ContactSection = () => {
 
           {/* Contact form card: paper bg on surface section — stands out cleanly */}
           <div
-            className="p-6 sm:p-8 border-[3px] shadow-[8px_8px_0_0_var(--nb-ink)]"
+            className="shadow-[8px_8px_0_0_var(--nb-ink)] p-6 sm:p-8 border-[3px]"
             style={{
               backgroundColor: "var(--nb-paper)",
               borderColor: "var(--nb-ink)",
