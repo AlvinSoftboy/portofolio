@@ -12,11 +12,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Alex Pratama — Freelance Frontend Developer" },
+      { title: "Poda Damanik — Freelance Full-stack Developer" },
       {
         name: "description",
         content:
-          "Portfolio Alex Pratama, freelance frontend developer spesialis React, TypeScript, dan Tailwind CSS.",
+          "Portfolio Poda Damanik, freelance Full-Stack Developer spesialis React, TypeScript, dan Tailwind CSS.",
       },
     ],
   }),
