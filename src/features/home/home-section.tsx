@@ -59,7 +59,7 @@ export const HomeSection = () => {
             className="mt-8 max-w-2xl font-black text-xl sm:text-2xl"
             style={{ color: "var(--nb-ink)" }}
           >
-            Freelance Frontend Developer
+            Website Dev Enthusiast
           </p>
           <p className="mt-4 max-w-2xl text-base sm:text-lg" style={{ color: "#4a4a46" }}>
             Membangun antarmuka modern, responsif, dan cepat dengan React, TypeScript, dan Tailwind

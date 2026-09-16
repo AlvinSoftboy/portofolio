@@ -34,7 +34,10 @@ export const AboutSection = () => {
 
         <div className="gap-12 grid md:grid-cols-5">
           <div className="md:col-span-3">
-            <p className="font-medium text-lg sm:text-xl leading-relaxed" style={{ color: "#2a2a28" }}>
+            <p
+              className="font-medium text-lg sm:text-xl leading-relaxed"
+              style={{ color: "#2a2a28" }}
+            >
               Saya adalah freelance frontend developer dengan pengalaman membangun modern. Fokus
               modern. Fokus pada performa, aksesibilitas, dan code quality. Saya menikmati mengubah
               desain kompleks menjadi antarmuka yang clean dan mudah digunakan.

@@ -142,10 +142,10 @@
  * --nb-highlight : decorative accent — badges, tags, hover fills
  */
 :root {
-  --nb-ink:       #0a0a0a;
-  --nb-paper:     #fafaf8;
-  --nb-surface:   #f0ede6;
-  --nb-accent:    #ff5500;
+  --nb-ink: #0a0a0a;
+  --nb-paper: #fafaf8;
+  --nb-surface: #f0ede6;
+  --nb-accent: #ff5500;
   --nb-highlight: #ffe135;
 }
 
